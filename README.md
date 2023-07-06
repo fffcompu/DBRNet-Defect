@@ -1,4 +1,4 @@
-# DBRNET
+# DBRNet
 DBRNet:Dual-Branch Real-Time Segmentation
 NetWork For Metal Defect Detection
 ![network](./docs/Net.jpg)
