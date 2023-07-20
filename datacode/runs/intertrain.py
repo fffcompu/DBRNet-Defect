@@ -67,7 +67,7 @@ parser.add_argument('--workers', '-j', type=int, default=4,
 parser.add_argument('--batch_size', type=int, default=8, metavar='N',
                     help='input batch size for training (default: 8)')
 # 总的epoch
-parser.add_argument('--epochs', type=int, default=100, metavar='N',
+parser.add_argument('--epochs', type=int, default=150, metavar='N',
                     help='number of epochs to train (default: 50)')
 # 学习率
 parser.add_argument('--lr', type=float, default=1e-2, metavar='LR',
@@ -472,6 +472,7 @@ for epoch in range(epochs + 1):
             filename = 'checkpoint.pth'
             filename = os.path.join(csv_path, filename)
             torch.save(net, filename)
+            #验证集上的miou最佳
             if is_best:
                 best_filename = 'best_checkpoint.pth'
                 best_filename = os.path.join(csv_path, best_filename)

@@ -35,8 +35,8 @@ class SegDataset_severstal(Dataset):
     # 读取每个图片
     def __getitem__(self, index):
         name=self.samples[index]
-        image = Image.open(join(self.root,'6666_img','{}.jpg'.format(name)))
-        label = Image.open(join(self.root,'6666_label','{}.png'.format(name)))  ## 读成1通道
+        image = Image.open(join(self.root,'img','{}.jpg'.format(name)))
+        label = Image.open(join(self.root,'label','{}.png'.format(name)))  ## 读成1通道
         #训练集数据增强
         if self.split=='train':
             im_lb = dict(im = image, lb = label)
