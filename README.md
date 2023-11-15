@@ -32,3 +32,5 @@ Eval model.
 ```
 python val.py
 ```
+Test model
+python test.py
