@@ -137,7 +137,7 @@ if args.dataset == 'neu':
     train_dataset = SegDataset(r'/root/autodl-tmp/MyFrame/datacode/NEU_Seg/', imagesize, cropsize, split='train',
                                 transform=data_transforms['train'])
     train_dataloader = DataLoader(train_dataset, batch_size=batchsize, shuffle=True)
-    val_dataset = SegDataset(r'/root/autodl-tmp/MyFrame/datacode/NEU_Seg/', imagesize, cropsize, split='test',
+    val_dataset = SegDataset(r'/root/autodl-tmp/MyFrame/datacode/NEU_Seg/', imagesize, cropsize, split='val',
                               transform=data_transforms['val'])
     val_dataloader = DataLoader(val_dataset, batch_size=batchsize, shuffle=False)
 
@@ -166,7 +166,7 @@ elif args.dataset=='neu_900':
     train_dataset = SegDataset(dataset_rootdir, imagesize, cropsize, split='train',
                               transform=data_transforms['train'])
     train_dataloader = DataLoader(train_dataset, batch_size=batchsize, shuffle=True)
-    val_dataset = SegDataset(dataset_rootdir, imagesize, cropsize, split='test',
+    val_dataset = SegDataset(dataset_rootdir, imagesize, cropsize, split='val',
                            transform=data_transforms['val'])
     val_dataloader = DataLoader(val_dataset, batch_size=batchsize, shuffle=False)
 
